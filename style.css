@@ -1,0 +1,330 @@
+@font-face {
+font-family: 'ProximaNova-Black';
+    
+    src: 
+       local('ProximaNova-Black'), url('https://nomail.com.ua/files/eot/aa46d234cf405126cdd1c36600e4b978.eot?#iefix') format('embedded-opentype'),
+      url('https://nomail.com.ua/files/woff/aa46d234cf405126cdd1c36600e4b978.woff') format('woff'),
+    url('https://nomail.com.ua/files/woff2/aa46d234cf405126cdd1c36600e4b978.woff2') format('woff2');
+}
+
+@font-face { font-family: 'ProximaNova-Black';  src: local('ProximaNova-Black'), url('https://nomail.com.ua/files/woff/aa46d234cf405126cdd1c36600e4b978.woff') format('woff'); }
+
+
+
+*, *:after, *:before{
+    box-sizing: border-box;
+    margin: 0;
+}
+body, html{
+    width: 100%;
+    min-height: 100vh;
+}
+body{
+    color: #fff;
+    
+    font-family: 'Roboto', sans-serif;
+    /*background: linear-gradient(180deg, rgba(8, 8, 8, 0) 75.81%, #070506 100%), url(img/main-bg.jpg);*/
+    background: #010101 url(img/main-bg.jpg) top right -170% no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+}
+/*Header*/
+.header{
+    padding-top: 90px;
+    padding-bottom: 80px;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    margin-right: 70px;
+}
+.nav-link{
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 150%;
+    color: #FFFFFF;
+}
+.nav-link:hover{
+    color: #953535;
+}
+.nav-link:not(:last-child){
+    margin-right: 15px;
+}
+/*Container*/
+.container{
+    margin: auto;
+    width: 90%;
+    max-width: 1060px;
+}
+/*Hero(Main)*/
+.hero-suptitle{
+    font-family: 'ProximaNova-Black', sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 100%;
+}
+.hero-title{
+    font-family: 'ProximaNova-Black', sans-serif;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 78px;
+}
+
+.hero-text{
+    font-size: 18px;
+    line-height: 150%;
+    color: #AFAFAF;
+    max-width: 572px;
+    padding-bottom: 25px;
+}
+.premier{
+    display: block;
+    font-size: 18px;
+    line-height: 150%;
+    color: #B02000;
+}
+.hero-date{
+    display: block;
+    font-size: 24px;
+    line-height: 150%;
+    margin-bottom: 46px;
+}
+/*Play trailer*/
+.button-play{
+    text-decoration: none;
+    outline: none;
+    background: linear-gradient(90deg, #FB641A 0%, #FC3309 100%);
+    border-radius: 300px;
+    border: none;
+    padding: 25px 80px 25px 35px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 16px;
+    position: relative;
+    cursor: pointer;
+}
+.button-play:after{
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: "";
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    background: #fff url(img/Polygon%201.svg) right 8px top 4px;
+    background-repeat: no-repeat;
+    
+}
+.button-play:before{
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    content: "";
+    width: 81px;
+    height: 81px;
+    border-radius: 50%;
+    display: inline-block; 
+    background-color:  rgba(255, 255, 255, 0.3);
+}
+/*Episodes*/
+.episodes{
+    padding: 60px 0;
+    margin-top: 50px;
+}
+.episodes-title{
+    margin-bottom: 24px;
+}
+.slider{
+    display: flex;
+    user-select: none;
+    flex-wrap: wrap;
+}
+.slider-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 250px;
+    min-height: 200px;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 30px;
+    position: relative;
+    cursor: pointer;
+    
+}
+.slider-item:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(80, 80, 80, 0.86);
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    transition: background .15s linear;
+}
+.slider-item:hover:after{
+    background: rgba(64, 101, 255, 0.86);
+}
+.item-year, .item-title, .item-rating {
+    z-index: 1;
+}
+.item-year{
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+}
+.item-title{
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 150%;
+}
+.item-rating{
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 150%;
+}
+.episode-1{
+    background: url(img/ep1.jpg);
+}
+.episode-4{
+    background: url(img/ep4.jpg);
+}
+.episode-5{
+    background: url(img/ep5.jpg);
+}
+.episode-6{
+    background: url(img/ep6.jpg);
+}
+.rating-label{
+    margin-right: 12px;
+}
+.star{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: url(img/star.svg) no-repeat center;
+}
+.star-o{
+    background: url(img/star-o.svg) no-repeat center;
+}
+.item-rating{
+    opacity: 0;
+    transition: all .1s linear;
+}
+.slider-item:hover .item-rating{
+    opacity: 1;
+}
+/*carousel items*/
+.slider__arrow--left{
+    height: 32px;
+    width: 32px;
+    background: transparent url(img/left-arrow.svg) no-repeat center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-right: 15px;
+}
+.slider__arrow--right{
+    height: 32px;
+    width: 32px;
+    background: transparent url(img/right-arrow.svg) no-repeat center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.slider__arrow--left span, .slider__arrow--right span{
+    display: none;
+}
+
+
+
+/*Media*/
+@media (min-width:588px) and (max-width:850px){
+    .header{
+        padding-top: 55px;
+        padding-bottom: 75px;
+    }
+    .hero-suptitle{
+        font-size: 30px;
+    }
+    .hero-title{
+        font-size: 45px;
+    }
+    .hero-text{
+        font-size: 14px;
+    }
+}
+
+@media (min-width:421px) and (max-width:587px){
+    .header{
+        padding-top: 40px;
+        padding-bottom: 60px;
+        flex-wrap: wrap;
+    }
+    .nav{
+        padding-top: 15px;
+        display: block;
+    }
+    .hero-suptitle{
+        font-size: 30px;
+    }
+    .hero-title{
+        font-size: 36px;
+    }
+    .hero-text{
+        font-size: 14px;
+    }
+}
+
+
+
+@media (min-width: 1px) and (max-width:420px){
+    .header{
+        padding-top: 40px;
+        padding-bottom: 60px;
+        flex-wrap: wrap;
+    }
+    .nav{
+        padding-top: 15px;
+        display: block;
+    }
+    .nav-link{
+        font-size: 14px;
+    }
+    .nav-link:not(:last-child){
+        margin-right: 8px;
+    }
+    .hero-suptitle{
+        font-size: 20px;
+    }
+    .hero-title{
+        font-size: 26px;
+    }
+    .hero-text{
+        font-size: 14px;
+    }
+    .button-play{
+        font-size: 12px;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
