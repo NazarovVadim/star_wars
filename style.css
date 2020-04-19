@@ -34,6 +34,7 @@ body{
     padding-bottom: 80px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 .logo{
     margin-right: 70px;
@@ -192,16 +193,17 @@ body{
     line-height: 150%;
 }
 .episode-1{
-    background: url(img/ep1.jpg);
+    background: url(img/ep1.jpg) center;
+    background-repeat: no-repeat;
 }
 .episode-4{
-    background: url(img/ep4.jpg);
+    background: url(img/ep4.jpg) no-repeat center;
 }
 .episode-5{
-    background: url(img/ep5.jpg);
+    background: url(img/ep5.jpg) no-repeat center;
 }
 .episode-6{
-    background: url(img/ep6.jpg);
+    background: url(img/ep6.jpg) no-repeat center;
 }
 .rating-label{
     margin-right: 12px;
@@ -248,8 +250,11 @@ body{
 
 /*Media*/
 @media (min-width:588px) and (max-width:850px){
+    body{
+        background-attachment: scroll;
+    }
     .header{
-        padding-top: 55px;
+        padding-top: 50px;
         padding-bottom: 75px;
     }
     .hero-suptitle{
@@ -264,10 +269,16 @@ body{
 }
 
 @media (min-width:421px) and (max-width:587px){
+    body{
+        background-attachment: scroll;
+    }
     .header{
-        padding-top: 40px;
+        padding-top: 200px;
         padding-bottom: 60px;
         flex-wrap: wrap;
+    }
+    .slider-item{
+        width: 80%;
     }
     .nav{
         padding-top: 15px;
@@ -287,10 +298,16 @@ body{
 
 
 @media (min-width: 1px) and (max-width:420px){
+    body{
+        background-attachment: scroll;
+    }
     .header{
-        padding-top: 40px;
+        padding-top: 200px;
         padding-bottom: 60px;
         flex-wrap: wrap;
+    }
+    .slider-item{
+        width: 80%;
     }
     .nav{
         padding-top: 15px;
